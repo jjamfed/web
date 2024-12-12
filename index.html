@@ -1,52 +1,18 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>jamfed</title>
-        <link rel="stylesheet" href="index.css">
-        <script src="index.js"></script>
-    </head>
+<html lang="en">
 
-    <body>
-        <h1>jamfed</h1>
-        <hr>
-        </div>
-    </body>
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+<head>
+    <meta charset="UTF-8">
+    <title>Firebase Click Counter on GitHub Pages</title>
+    <!-- Include Firebase SDK scripts -->
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"></script>
+    <script src="index.js"></script> <!-- Link to our JavaScript file -->
+</head>
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyALHWQYgLuetj5FetuKegG00lZbq-6mlrU",
-    authDomain: "web-data-9cce2.firebaseapp.com",
-    databaseURL: "https://web-data-9cce2-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "web-data-9cce2",
-    storageBucket: "web-data-9cce2.firebasestorage.app",
-    messagingSenderId: "50223594159",
-    appId: "1:50223594159:web:112cb230d5bde04c6ab25a",
-    measurementId: "G-EL7344D0B7"
-  };
+<body>
+    <button id="clickButton">Click Me!</button>
+    <p id="clickCountDisplay">Click count: 0</p>
+</body>
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  const newData = {
-  name: "John Doe",
-  age: 30
-  };
-  const newDataRef = database.ref("users").push(newData);
-  console.log("Data saved with key: ", newDataRef.key);
- database.ref("users").on("value", (snapshot) => {
-     const data = snapshot.val();
-     console.log(data);
- });
-  
-    
-</script>
 </html>
