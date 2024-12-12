@@ -37,7 +37,17 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-
+  const newData = {
+  name: "John Doe",
+  age: 30
+  };
+  const newDataRef = database.ref("users").push(newData);
+  console.log("Data saved with key: ", newDataRef.key);
+ database.ref("users").on("value", (snapshot) => {
+     const data = snapshot.val();
+     console.log(data);
+ });
+  
     
 </script>
 </html>
